@@ -30,9 +30,10 @@ angular.module('starter.controllers', [])
 
 .controller('ChatDetailCtrl', function($scope, $state,  ConexionServ, $stateParams, $ionicPopup ) {
      ConexionServ.query('SELECT * FROM profesores WHERE rowid=?' , [$stateParams.profesor_rowid]).then(function(result, text){
-        if(result.lenght >0) {
-       $scope.profesor = result[0];
-
+        
+      if(result.length >0) {
+          $scope.profesor = result[0];
+          console.log($scope.profesor);
       }else{
       $scope.no_hay = true;
    }
