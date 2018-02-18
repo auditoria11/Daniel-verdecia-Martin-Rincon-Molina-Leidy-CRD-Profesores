@@ -1,4 +1,4 @@
-<ion-view view-title="Actualizar Profesor">
+<ion-view view-title="Nuevo Profesor">
   <ion-content class="padding">
 
   
@@ -9,12 +9,11 @@
         <input type="text" ng-model="profesor.nombres" placeholder="Nombres">
       </label>
 
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Apellidos</span>
+        <input type="text" ng-model="profesor.apellidos" placeholder="Apellidos">
+      </label>
 
-        <label class="item item-input item-floating-label">
-            <span class="input-label">Apellidos</span>
-            <input type="text" ng-model="profesor.apellidos" placeholder="Apellidos">
-            
-        </label>
 
 
         <label class="item item-input item-floating-label">
@@ -29,11 +28,12 @@
         
       </label>
 
-        
-        <button class="button button-block button-positive" ng-click="actualizarProfesor(profesor.nombres, profesor.apellidos, profesor.Sexo, profesor.fecha_nac)">Actualizar Profesor</button>
+           
+        <button class="button button-block button-positive" ng-click="crearProfesor(profesor.nombres, 
+        profesor.apellidos, profesor.Sexo, profesor.fecha_nac)">Crear Profesor</button>
     
    </div>
 
-    
+   
   </ion-content>
 </ion-view>
